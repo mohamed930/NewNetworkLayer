@@ -92,6 +92,6 @@ iOSInjectionProject/
 podfile.lock
 Pods/*
 
-._*.swift
+._*
 ._testConnection.xcworkspace
 ._testConnection.xcworkspace
