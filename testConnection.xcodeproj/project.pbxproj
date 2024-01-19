@@ -15,6 +15,8 @@
 		D315B1242B5A94E000C1A826 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B1222B5A94E000C1A826 /* RecipesViewController.swift */; };
 		D315B1252B5A94E000C1A826 /* RecipesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D315B1232B5A94E000C1A826 /* RecipesViewController.xib */; };
 		D315B1272B5A950100C1A826 /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B1262B5A950100C1A826 /* RecipesViewModel.swift */; };
+		D315B12A2B5A9C6200C1A826 /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B1292B5A9C6200C1A826 /* ConnectionStatus.swift */; };
+		D315B12D2B5A9D9400C1A826 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B12C2B5A9D9400C1A826 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		D315B1222B5A94E000C1A826 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		D315B1232B5A94E000C1A826 /* RecipesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesViewController.xib; sourceTree = "<group>"; };
 		D315B1262B5A950100C1A826 /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
+		D315B1292B5A9C6200C1A826 /* ConnectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
+		D315B12C2B5A9D9400C1A826 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		DDCF5986F77BF589048813A0 /* Pods-testConnection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testConnection.debug.xcconfig"; path = "Target Support Files/Pods-testConnection/Pods-testConnection.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +89,7 @@
 				D315B11D2B5A944E00C1A826 /* AppDelegate */,
 				D315B11F2B5A94A900C1A826 /* launch screen */,
 				D315B1202B5A94B900C1A826 /* Flow */,
+				D315B1282B5A9C4A00C1A826 /* Customs + Extensions */,
 				D315B11E2B5A947700C1A826 /* Assets */,
 			);
 			path = testConnection;
@@ -132,6 +137,15 @@
 				D315B1232B5A94E000C1A826 /* RecipesViewController.xib */,
 			);
 			path = Recipes;
+			sourceTree = "<group>";
+		};
+		D315B1282B5A9C4A00C1A826 /* Customs + Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D315B1292B5A9C6200C1A826 /* ConnectionStatus.swift */,
+				D315B12C2B5A9D9400C1A826 /* UIViewController.swift */,
+			);
+			path = "Customs + Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D315B1272B5A950100C1A826 /* RecipesViewModel.swift in Sources */,
+				D315B12A2B5A9C6200C1A826 /* ConnectionStatus.swift in Sources */,
+				D315B12D2B5A9D9400C1A826 /* UIViewController.swift in Sources */,
 				D315B10A2B5A943700C1A826 /* AppDelegate.swift in Sources */,
 				D315B1242B5A94E000C1A826 /* RecipesViewController.swift in Sources */,
 				D315B10C2B5A943700C1A826 /* SceneDelegate.swift in Sources */,
