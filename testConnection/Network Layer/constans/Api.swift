@@ -8,5 +8,6 @@
 import Foundation
 
 enum Api: String {
-    case baseUrl = ""
+    case baseUrl = "https://api.edamam.com/api/"
+    case recipesEndpoint = "recipes/v2"
 }

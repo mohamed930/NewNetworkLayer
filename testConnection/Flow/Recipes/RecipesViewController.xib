@@ -8,9 +8,15 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipesViewController" customModule="testConnection" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="Why-Ms-0aX" id="swh-1x-Tpq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,18 +25,36 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lO-E9-lti">
-                    <rect key="frame" x="142" y="433.5" width="130" height="29"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q97-QG-gvd">
+                    <rect key="frame" x="171" y="58" width="72" height="26"/>
+                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Why-Ms-0aX">
+                    <rect key="frame" x="30" y="118" width="354" height="710"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vkw-0t-CAX">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Hh6-JS-7uS"/>
+                        <outlet property="delegate" destination="-1" id="GZw-mf-2k9"/>
+                    </connections>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="2lO-E9-lti" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0ej-OZ-JAM"/>
-                <constraint firstItem="2lO-E9-lti" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jNP-lY-PMW"/>
+                <constraint firstItem="Q97-QG-gvd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Hdi-Kw-Jj2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Why-Ms-0aX" secondAttribute="trailing" constant="30" id="NO1-02-7Ag"/>
+                <constraint firstItem="Why-Ms-0aX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="WvF-LR-Mn9"/>
+                <constraint firstItem="Q97-QG-gvd" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="kzk-NF-Wa6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Why-Ms-0aX" secondAttribute="bottom" constant="34" id="uj7-ju-43J"/>
+                <constraint firstItem="Why-Ms-0aX" firstAttribute="top" secondItem="Q97-QG-gvd" secondAttribute="bottom" constant="34" id="w5M-eY-29Z"/>
             </constraints>
             <point key="canvasLocation" x="132" y="-11"/>
         </view>

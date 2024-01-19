@@ -33,7 +33,7 @@ final class ConnectionStatus {
         startNotify()
     }
     
-    private func startNotify() {
+    func startNotify() {
         reachability.whenReachable = { [weak self] reachability in
             guard let self = self else { return }
             

@@ -29,6 +29,7 @@ class BaseAPI<T:TargetType> {
         
         return Future { [unowned self] promise in
             
+            ConnectionStatus.shared.startNotify()
             ConnectionStatus.shared.connectionStatusObservable.sink(receiveValue: { connection in
                 switch connection {
                     
