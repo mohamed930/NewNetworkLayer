@@ -8,9 +8,9 @@ target 'testConnection' do
 
   # Pods for testConnection
   
-  pod 'Alamofire'
+  pod 'Alamofire' , '~> 5.4.0'
   pod 'SDWebImage'
-  pod 'AlamofireLogger'
+  pod 'AlamofireNetworkActivityLogger'
   pod 'ReachabilitySwift'
   pod 'PlainPing'
   pod 'RappleProgressHUD'
