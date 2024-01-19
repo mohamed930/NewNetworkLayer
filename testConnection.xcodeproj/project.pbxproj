@@ -17,6 +17,11 @@
 		D315B1272B5A950100C1A826 /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B1262B5A950100C1A826 /* RecipesViewModel.swift */; };
 		D315B12A2B5A9C6200C1A826 /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B1292B5A9C6200C1A826 /* ConnectionStatus.swift */; };
 		D315B12D2B5A9D9400C1A826 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B12C2B5A9D9400C1A826 /* UIViewController.swift */; };
+		D315B1332B5A9E8600C1A826 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B1322B5A9E8600C1A826 /* TargetType.swift */; };
+		D315B1362B5A9EA700C1A826 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B1352B5A9EA700C1A826 /* Api.swift */; };
+		D315B1382B5A9EE300C1A826 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B1372B5A9EE300C1A826 /* BaseAPI.swift */; };
+		D315B13A2B5A9F1400C1A826 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B1392B5A9F1400C1A826 /* ErrorMessage.swift */; };
+		D315B13C2B5AA16A00C1A826 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B13B2B5AA16A00C1A826 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,11 @@
 		D315B1262B5A950100C1A826 /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
 		D315B1292B5A9C6200C1A826 /* ConnectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
 		D315B12C2B5A9D9400C1A826 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		D315B1322B5A9E8600C1A826 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		D315B1352B5A9EA700C1A826 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		D315B1372B5A9EE300C1A826 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		D315B1392B5A9F1400C1A826 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		D315B13B2B5AA16A00C1A826 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		DDCF5986F77BF589048813A0 /* Pods-testConnection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testConnection.debug.xcconfig"; path = "Target Support Files/Pods-testConnection/Pods-testConnection.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +99,7 @@
 				D315B11D2B5A944E00C1A826 /* AppDelegate */,
 				D315B11F2B5A94A900C1A826 /* launch screen */,
 				D315B1202B5A94B900C1A826 /* Flow */,
+				D315B12E2B5A9E3500C1A826 /* Network Layer */,
 				D315B1282B5A9C4A00C1A826 /* Customs + Extensions */,
 				D315B11E2B5A947700C1A826 /* Assets */,
 			);
@@ -144,8 +155,52 @@
 			children = (
 				D315B1292B5A9C6200C1A826 /* ConnectionStatus.swift */,
 				D315B12C2B5A9D9400C1A826 /* UIViewController.swift */,
+				D315B13B2B5AA16A00C1A826 /* UIImageView.swift */,
 			);
 			path = "Customs + Extensions";
+			sourceTree = "<group>";
+		};
+		D315B12E2B5A9E3500C1A826 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				D315B1342B5A9E9D00C1A826 /* constans */,
+				D315B12F2B5A9E4700C1A826 /* Base */,
+				D315B1302B5A9E4D00C1A826 /* Error */,
+				D315B1312B5A9E5A00C1A826 /* Endpoints */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		D315B12F2B5A9E4700C1A826 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D315B1322B5A9E8600C1A826 /* TargetType.swift */,
+				D315B1372B5A9EE300C1A826 /* BaseAPI.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D315B1302B5A9E4D00C1A826 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				D315B1392B5A9F1400C1A826 /* ErrorMessage.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		D315B1312B5A9E5A00C1A826 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		D315B1342B5A9E9D00C1A826 /* constans */ = {
+			isa = PBXGroup;
+			children = (
+				D315B1352B5A9EA700C1A826 /* Api.swift */,
+			);
+			path = constans;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +320,15 @@
 			files = (
 				D315B1272B5A950100C1A826 /* RecipesViewModel.swift in Sources */,
 				D315B12A2B5A9C6200C1A826 /* ConnectionStatus.swift in Sources */,
+				D315B13A2B5A9F1400C1A826 /* ErrorMessage.swift in Sources */,
 				D315B12D2B5A9D9400C1A826 /* UIViewController.swift in Sources */,
+				D315B1382B5A9EE300C1A826 /* BaseAPI.swift in Sources */,
 				D315B10A2B5A943700C1A826 /* AppDelegate.swift in Sources */,
+				D315B13C2B5AA16A00C1A826 /* UIImageView.swift in Sources */,
 				D315B1242B5A94E000C1A826 /* RecipesViewController.swift in Sources */,
 				D315B10C2B5A943700C1A826 /* SceneDelegate.swift in Sources */,
+				D315B1362B5A9EA700C1A826 /* Api.swift in Sources */,
+				D315B1332B5A9E8600C1A826 /* TargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
