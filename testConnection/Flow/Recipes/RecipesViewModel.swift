@@ -10,6 +10,7 @@ import Combine
 
 class RecipesViewModel {
     var isloadingPublisher = PassthroughSubject<Bool,Never>()
+    var errorPublisher     = PassthroughSubject<Void,Never>()
     var responsePublisher = PassthroughSubject<[Hit],Never>()
     
     private let recipeapi = RecipesAPI()
@@ -18,7 +19,7 @@ class RecipesViewModel {
     func fetchDataOperation() {
         isloadingPublisher.send(true)
         
-        var response = recipeapi.fetchRecipes()
+        let response = recipeapi.fetchRecipes()
         response.sink(receiveCompletion: { [weak self] error in
             guard let self = self else { return }
 
@@ -31,12 +32,14 @@ class RecipesViewModel {
                 print(e)
                 
                 if e == "Error in your connection" {
-                   response = recipeapi.fetchRecipes()
+                    self.errorPublisher.send()
                 }
             }
             
         }, receiveValue: { [weak self] response in
+            
             guard let self = self else { return }
+            
             self.isloadingPublisher.send(false)
             
             self.responsePublisher.send(response.hits)

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3FA9CA9AFC763CB8640BBDAD /* Pods_testConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365D22A0FBF7FDAEB34830B9 /* Pods_testConnection.framework */; };
+		D30994C72B5BD61B00258E51 /* NoInternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30994C62B5BD61B00258E51 /* NoInternetConnection.swift */; };
+		D30994C92B5BD63000258E51 /* NoInternetConnection.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30994C82B5BD63000258E51 /* NoInternetConnection.xib */; };
+		D30994CB2B5BDADD00258E51 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30994CA2B5BDADD00258E51 /* UIView.swift */; };
+		D30994CD2B5BE5BA00258E51 /* ShardCheckConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30994CC2B5BE5BA00258E51 /* ShardCheckConnection.swift */; };
 		D315B10A2B5A943700C1A826 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B1092B5A943700C1A826 /* AppDelegate.swift */; };
 		D315B10C2B5A943700C1A826 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315B10B2B5A943700C1A826 /* SceneDelegate.swift */; };
 		D315B1132B5A943700C1A826 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D315B1122B5A943700C1A826 /* Assets.xcassets */; };
@@ -53,6 +57,10 @@
 /* Begin PBXFileReference section */
 		365D22A0FBF7FDAEB34830B9 /* Pods_testConnection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testConnection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C6FE553D5285547BEDFC69B /* Pods-testConnection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testConnection.release.xcconfig"; path = "Target Support Files/Pods-testConnection/Pods-testConnection.release.xcconfig"; sourceTree = "<group>"; };
+		D30994C62B5BD61B00258E51 /* NoInternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetConnection.swift; sourceTree = "<group>"; };
+		D30994C82B5BD63000258E51 /* NoInternetConnection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoInternetConnection.xib; sourceTree = "<group>"; };
+		D30994CA2B5BDADD00258E51 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D30994CC2B5BE5BA00258E51 /* ShardCheckConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShardCheckConnection.swift; sourceTree = "<group>"; };
 		D315B1062B5A943700C1A826 /* testConnection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testConnection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D315B1092B5A943700C1A826 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D315B10B2B5A943700C1A826 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +135,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D30994C42B5BD5F900258E51 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				D30994C52B5BD60500258E51 /* No internet connection */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		D30994C52B5BD60500258E51 /* No internet connection */ = {
+			isa = PBXGroup;
+			children = (
+				D30994C62B5BD61B00258E51 /* NoInternetConnection.swift */,
+				D30994C82B5BD63000258E51 /* NoInternetConnection.xib */,
+			);
+			path = "No internet connection";
+			sourceTree = "<group>";
+		};
 		D315B0FD2B5A943700C1A826 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +178,7 @@
 				D315B1202B5A94B900C1A826 /* Flow */,
 				D315B12E2B5A9E3500C1A826 /* Network Layer */,
 				D315B1282B5A9C4A00C1A826 /* Customs + Extensions */,
+				D30994C42B5BD5F900258E51 /* UIView */,
 				D315B11E2B5A947700C1A826 /* Assets */,
 			);
 			path = testConnection;
@@ -208,11 +234,13 @@
 		D315B1282B5A9C4A00C1A826 /* Customs + Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D30994CC2B5BE5BA00258E51 /* ShardCheckConnection.swift */,
 				D315B1292B5A9C6200C1A826 /* ConnectionStatus.swift */,
 				D3C9660D2B5AF4760000FBE4 /* Utilites.swift */,
 				D315B12C2B5A9D9400C1A826 /* UIViewController.swift */,
 				D315B13B2B5AA16A00C1A826 /* UIImageView.swift */,
 				D3C966162B5AFDEE0000FBE4 /* UICollectionView.swift */,
+				D30994CA2B5BDADD00258E51 /* UIView.swift */,
 			);
 			path = "Customs + Extensions";
 			sourceTree = "<group>";
@@ -396,6 +424,7 @@
 				D3C965F82B5AF3970000FBE4 /* Poppins-ExtraLight.ttf in Resources */,
 				D3C965F92B5AF3970000FBE4 /* Poppins-LightItalic.ttf in Resources */,
 				D3C966052B5AF3970000FBE4 /* Poppins-Regular.ttf in Resources */,
+				D30994C92B5BD63000258E51 /* NoInternetConnection.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +480,7 @@
 				D3C966152B5AFA5E0000FBE4 /* RecipesAPI.swift in Sources */,
 				D3C966172B5AFDEE0000FBE4 /* UICollectionView.swift in Sources */,
 				D315B1272B5A950100C1A826 /* RecipesViewModel.swift in Sources */,
+				D30994C72B5BD61B00258E51 /* NoInternetConnection.swift in Sources */,
 				D315B12A2B5A9C6200C1A826 /* ConnectionStatus.swift in Sources */,
 				D315B13A2B5A9F1400C1A826 /* ErrorMessage.swift in Sources */,
 				D315B12D2B5A9D9400C1A826 /* UIViewController.swift in Sources */,
@@ -460,6 +490,8 @@
 				D3C966132B5AF9740000FBE4 /* RecipesNetworking.swift in Sources */,
 				D3C966102B5AF74B0000FBE4 /* RecipeModel.swift in Sources */,
 				D315B1242B5A94E000C1A826 /* RecipesViewController.swift in Sources */,
+				D30994CD2B5BE5BA00258E51 /* ShardCheckConnection.swift in Sources */,
+				D30994CB2B5BDADD00258E51 /* UIView.swift in Sources */,
 				D315B10C2B5A943700C1A826 /* SceneDelegate.swift in Sources */,
 				D315B1362B5A9EA700C1A826 /* Api.swift in Sources */,
 				D315B1332B5A9E8600C1A826 /* TargetType.swift in Sources */,

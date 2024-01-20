@@ -22,6 +22,7 @@ class RecipesViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         regiesterCollectionView()
         subscribeToLoadingIndecator()
+        subscribeToErrorResponse()
         subscribeToResponsePublisher()
         fetchData()
     }
@@ -44,10 +45,30 @@ class RecipesViewController: UIViewController {
         }).store(in: &cancellables)
     }
     
+    func subscribeToErrorResponse() {
+        viewmodel.errorPublisher.sink(receiveValue: { [weak self] in
+            guard let self = self else { return }
+            
+            let noInternetView = NoInternetConnection()
+            
+            noInternetView.buttonTappedPublisher.sink(receiveValue: { [weak self] _ in
+                guard let self = self else { return }
+                
+                self.viewmodel.fetchDataOperation()
+            }).store(in: &noInternetView.cancellables)
+            
+            self.hits = []
+            self.collectionView.reloadData()
+            self.collectionView.backgroundView = noInternetView
+            
+        }).store(in: &cancellables)
+    }
+    
     func subscribeToResponsePublisher() {
         viewmodel.responsePublisher.sink(receiveValue: { [weak self] hits in
             guard let self = self else { return }
             
+            self.collectionView.backgroundView = .none
             self.hits = hits
             self.collectionView.reloadData()
         }).store(in: &cancellables)

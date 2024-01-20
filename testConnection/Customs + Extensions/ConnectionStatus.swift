@@ -10,28 +10,25 @@ import Combine
 import Reachability
 import PlainPing
 
-final class ConnectionStatus {
-    static let shared = ConnectionStatus()
-    
+final class CheckConnection {
     //declare this property where it won't go out of scope relative to your listener
     private let reachability = try! Reachability()
-    private var successCounter = 0
     
+    var successCounter = 0
     
     enum connectionStatus {
+        case unspecified
         case connected
         case disconnected
         case error
     }
     
-    private var connectionStatusPublisher = PassthroughSubject<connectionStatus,Never>()
+    private var connectionStatusPublisher = CurrentValueSubject<connectionStatus,Never>(.unspecified)
     var connectionStatusObservable: AnyPublisher<connectionStatus,Never> {
         return connectionStatusPublisher.eraseToAnyPublisher()
     }
     
-    init() {
-        startNotify()
-    }
+    
     
     func startNotify() {
         reachability.whenReachable = { [weak self] reachability in
@@ -63,7 +60,7 @@ final class ConnectionStatus {
             self.connectionStatusPublisher.send(.error)
         }
     }
-        
+    
     private func performTaskMultipleTimes(completion: @escaping (connectionStatus) -> Void) {
         var counter = 0
 

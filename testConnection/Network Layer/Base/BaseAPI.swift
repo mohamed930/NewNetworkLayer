@@ -25,16 +25,16 @@ class BaseAPI<T:TargetType> {
         
         urlRequest.method = method
         urlRequest.headers = headers
+        ShardCheckConnection.shared.checkNetwork()
         
         
         return Future { [unowned self] promise in
-            
-            ConnectionStatus.shared.startNotify()
-            ConnectionStatus.shared.connectionStatusObservable.sink(receiveValue: { connection in
+            ShardCheckConnection.shared.connectionStatusObservable.sink(receiveValue: { connection in
                 switch connection {
                     
-                case .connected:
+                case .unspecified: break
                     
+                case .connected:
                     AF.request(urlRequest.url!, method: method, parameters: params.0,encoding: params.1,headers: headers).responseDecodable(of: M.self) { response in
                         
                         switch response.result {
