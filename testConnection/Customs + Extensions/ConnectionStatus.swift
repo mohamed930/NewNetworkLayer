@@ -95,7 +95,7 @@ final class CheckConnection {
     }
     
     private func pingNext(completion: @escaping (Bool) -> Void) {
-        PlainPing.ping("www.google.com", withTimeout: 1.5, completionBlock: { (timeElapsed:Double?, error:Error?) in
+        PlainPing.ping("8.8.8.8", withTimeout: 1.0, completionBlock: { (timeElapsed:Double?, error:Error?) in
             if let latency = timeElapsed {
                 print("latency (ms): \(latency)")
                 completion(true)
